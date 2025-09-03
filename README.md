@@ -1,3 +1,3 @@
 # Silicon
 INLÄMNINGSUPPGIFT - HTML och CSS
-Första inlämningsuppgiften på Webbutvecklingsprogrammet på EC Utbildningar
+Första inlämningsuppgiften på Webbutvecklare inom .NET hos EC Utbildningar
