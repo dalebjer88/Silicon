@@ -50,7 +50,7 @@ header {
     }
 
     .logo { grid-area: logo; }
-    .dark-mode {grid-area: dark-mode; display: none; @media(min-width 768px) {display:block}}
+    .dark-mode {grid-area: dark-mode; display: none; @media(min-width: 768px) {display:block}}
     .switch { grid-area: switch; display: none; @media(min-width: 768px) {display: block;}}
     .button { grid-area: link; display: none; @media(min-width: 1920px) {display: block;}}
     .nav-button { grid-area: navbtn; display: block; @media(min-width: 1920px) {display: none;}}
