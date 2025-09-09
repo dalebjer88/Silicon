@@ -1,58 +1,282 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 *, *::before, *::after {
-box-sizing: border-box;
+    box-sizing: border-box;
+
 }
 
 :root {
-    --text-color: #333333;
-    --background-color: #ffffff;
-    --link-color: #c721c7;
+   
+    --color-body-text: #565973;
+    --color-body-background: #ffffff;
+    --color-heading-text: #0B0F19;
+    --color-button-text: #ffffff;
+    --color-button-background: #6366F1;
+    --color-button-hover-background: #0B0F19;
+    --color-button-download-text: #FFFFFF;
+    --color-button-download-background: #0B0F19;
+    --color-button-download-hover-background: #0B0F19;
+
 }
 
 [data-theme="dark"] {
-  --bg-color: #121212;
-  --text-color: #ffffff;
+
+    --background-color: #121212;
+    --text-color: #ffffff;
+
 }
 
-html, body {
+body {
+
     margin: 0;
     scroll-behavior: smooth;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    font-family: "Roboto", sans-serif;
+    color: var(--color-body-text);
+    background-color: var(--color-body-background);
+    font-family: "Manrope", sans-serif;
     font-size: 16px;
     font-weight: 400;
     font-style: normal;
     line-height: 1.5;
+
 }
 
-.wrapper {
-    height: 100dvh;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+h1,h2,h3,h4,h5,h6 {
+
+    color: var(--color-heading-text);
+
+}
+
+button, .btn {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 40px;
+    margin-left: 15px;
+
+    color: var(--color-button-text);
+    background-color: var(--color-button-background);
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background 0.15s ease-in-out;
+    
+    &:hover {
+        background-color: var(--color-button-hover-background);
+    }
+    img {
+        height: 100%;
+        width: auto;
+    }
+    @media (width < 1920px) {
+        display: none;
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 100%;
+    max-width: 1320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.app-download-buttons {
+    display:flex;
+}
+
+.btn-download {
+
+    display: inline-block;
+    text-decoration: none;
+
+    
+    .btn-area {
+        padding: 10px;
+        display: grid;
+        column-gap: 1rem;
+        grid-template-columns: auto 1fr;
+        grid-template-areas: "icon text"
+                             "icon store";
+
+        background-color: var(--color-button-download-background);
+        color: var(--color-button-download-text);
+        
+        font-size: 1rem;
+
+        .download-app-text {
+            grid-area: text;
+            font-weight: 600;
+            font-size: 0.9em;
+            border: 1px solid red;
+
+        }
+
+        .download-app-icon {
+            grid-area: icon;
+            height: 100%;
+            border: 1px solid red;
+
+        }
+
+        .download-app-store {
+            grid-area: store;
+            font-size: 1.5em;
+            font-weight: 600;
+            border: 1px solid red;
+
+
+        }
+        }
+}
+
+.darkmode-text {
+    display: none;
+
+    @media(width >= 768px) {
+        display: flex;
+    }
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
 }
 
 header {
-    display: grid;
-    align-items: center;
-    grid-template-columns:1fr auto;
-    grid-template-areas: "logo navbtn";
 
-    @media (min-width: 768px) {
-        grid-template-columns: 1fr auto auto auto;
-        grid-template-areas: "logo dark-mode switch navbtn";
+    .header-area {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+    
+        .actions {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+
+            .account {
+                display: flex;
+                
+                .top-nav {
+                    margin-left: 1rem;
+                    padding-top: 5px;
+                    @media (width >= 1920px) {
+                        display:none;
+                    }
+                }
+            }
+        }
     }
+}
 
-    @media (min-width: 1920px) {
-        grid-template-columns: 1fr  auto auto auto;
-        grid-template-areas: "logo dark-mode switch link";
+.hero {
+
+    background: #FFFFFF;
+    background: linear-gradient(178deg, rgba(255, 255, 255, 0.07) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(99, 102, 241, 0.07) 83%);    
+    padding-top: 5rem;
+
+    .hero-area {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+       
+        @media (width >= 768px) {
+            flex-direction: row;
+            
+    
+        }
+
+        .hero-text {
+       
+         
+            border: 1px solid red;
+        
+            
+            .hero-title {
+                font-size: 56px;
+                font-weight: 800;
+                border: 1px solid red;
+            }
+            .hero-ingress {
+                font-size: 18px;
+                font-weight: 400;
+                border: 1px solid red;
+            }   
+        }
+    
+        .hero-image {
+           
+
+            border: 1px solid red;
+            
+            @media ( width < 769px) {
+                display: none;
+            }
+                
+            
+        }
     }
-
-    .logo { grid-area: logo; }
-    .dark-mode {grid-area: dark-mode; display: none; @media(min-width: 768px) {display:block}}
-    .switch { grid-area: switch; display: none; @media(min-width: 768px) {display: block;}}
-    .button { grid-area: link; display: none; @media(min-width: 1920px) {display: block;}}
-    .nav-button { grid-area: navbtn; display: block; @media(min-width: 1920px) {display: none;}}
-
 }

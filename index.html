@@ -3,27 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Si - Silicon</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Silicon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
-    <div class="wrapper">
-        <header>
+    <!-- Header start -->
+    <header>
+        <div class="container">
+            <div class="header-area">
+                <div class="logo">
+                    <a href="index.html"><img src="/Images/Logotype.svg" alt="Silicon Inc. logo"></a>
+                </div>
+                <div class="actions">
+                    
+                    <div class="darkmode-text">
+                        Darkmode
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    
+                    <div class="account">
+                        <a href="login.hmtl" class="btn">
+                            <img src="/Images/Icons/usericon.svg" alt="user icon">
+                            Sign in / up
+                        </a>
+                        <div class="top-nav"><img src="/Images/Icons/Button - Toggle navigation.svg"></div>        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
 
-            <div class="logo">LOGO</div>
-            <div class="dark-mode">Dark Mode</div>
-            <div class="switch">SWITCH</div>
-            <a class="button" href="#">BUTTON</a>
-            <button class="nav-button">NAV-BUTTON</button>
+    <!--Hero Secion-->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-area">
+                
+                <div class="hero-text">
+                    <h1 class="hero-title">Manage All Your Money In One App</h1>
+                    <p class="hero-ingress">We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
+                    <div class="app-download-buttons">
+                        
+                        <a href="#" class="btn-download">
+                            <div class="btn-area">
+                                <p class="download-app-text">Download on the</p>
+                                <img class="download-app-icon" src="/Images/Icons/Apple-logo-white.svg" alt="Downlaod App At App-Store">
+                                <p class="download-app-store"> App Store</p>
+                            </div>
+                        </a>
+                        
+                        <a href="#" class="btn-download">
+                            <div class="btn-area">
+                                <p class="download-app-text">GET IT ON</p>
+                                <img class="download-app-icon" src="/Images/Icons/Google-logo.svg" alt="Download at Google Play">
+                                <p class="download-app-store"> Google Play</p>
+                            </div>
+                        </a>                
+                    </div>
+                </div>
 
-        </header>
-        <main>main</main>
-        <footer>footer</footer>
+                <div class="hero-image">
+                    <img src="/Images/heromobil.svg">
+                </div>
 
-    </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="scripts/script.js"></script>
+    <script src="/js.scripts"></script>
 </body>
 </html>
