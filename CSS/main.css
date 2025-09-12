@@ -83,10 +83,18 @@ img {
 
     width: 100%;
     max-width: 1320px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+    
+    @media (width >= 768) {
+        max-width: 720px;
+    }
+    @media (width >= 992) {
+    max-width: 960px;
+    }
+    @media (width >= 1400px) {
+    max-width: 1320px;
+    }
 
 }
 
@@ -191,7 +199,7 @@ header {
 .hero {
 
     background: #6366F1;
-    background: linear-gradient(350deg,rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(255, 255, 255, 0.07) 83%);
+    background: linear-gradient(0deg,rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(255, 255, 255, 0.07) 83%);
     padding-top: 5rem;
 
     .hero-area {
@@ -227,7 +235,7 @@ header {
                 display: flex;
                 gap: 10px;
 
-                .google-store-button {
+            .google-store-button {
                 display: flex;
                 align-items: center;
                 width:180px;
@@ -249,7 +257,7 @@ header {
                 gap: 8px;
                 background-color: var(--color-button-download-background);
                 color: var(--color-button-download-text);
-                padding-left: 20px;
+                padding-left: 27px;
                 border-radius: 8px;
                 text-decoration: none;
                 font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -261,8 +269,11 @@ header {
                 line-height: 1.2;
                 }
 
-                .button-small-text {
+                .button-small-text-apple {
                 font-size: 12px;
+                }
+                .button-small-text-google {
+                font-size: 10px;
                 }
 
                 .button-large-text {
@@ -282,11 +293,45 @@ header {
 
             .hero-image {
 
-                align-items: auto;
-
-            } 
+                position: relative;
+            }    
 
         }
     }
 
+}
+
+.brands {
+   
+    background-color: var(--color-body-background);
+}
+.brand-area {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-top: 96px;
+    
+}
+
+.brand {
+    
+    width: 196px;
+    height: 100px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    
+    }
+    .brand img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+#brand6 {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
