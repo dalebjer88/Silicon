@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light-mode">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +9,19 @@
 </head>
 <body>
 
-<!--Header Section-->
+<!--MARK:Header Section-->
 <header>
     <div class="container">
         <div class="header-area">
             <div class="logo">
-                <a href="index.html"><img src="/Images/Logotype.svg" alt="Silicon Inc. logo"></a>
+                <a href="index.html"><img src="/Images/Logotype.svg" alt="Silicon Inc. logo" id="silicon-logo"></a>
             </div>
             <div class="actions">  
                 <div class="darkmode-text">
-                    Darkmode
+                    Dark Mode
                 </div>
                 <label class="switch">
-                    <input type="checkbox">
+                    <input type="checkbox" id="theme-switch">
                     <span class="slider round"></span>
                 </label>               
                 <div class="account">
@@ -36,7 +36,7 @@
     </div>
 </header>
 
-<!--Hero Section-->
+<!--MARK:Hero Section-->
 <section class="hero">
     <div class="container">
         <div class="hero-area">
@@ -45,14 +45,14 @@
                 <p class="hero-ingress">We offer you a new generation of the mobile banking. Save, spend & manage money in your pocket.</p>
                 <div class="download-buttons">
                     <a href="#" class="app-store-button">
-                        <img class="button-icon" src="/Images/Icons/Apple-logo-white.svg" alt="Apple">
+                        <img class="button-icon" src="/Images/Icons/Apple-logo-white.svg" alt="Apple" id="applestorepic">
                         <div class="button-text-container">
                             <span class="button-small-text-apple">Download on the</span>
                             <span class="button-large-text">App Store</span>
                         </div>
                     </a>
                     <a href="#" class="google-store-button">
-                        <img class="button-icon" src="/Images/Icons/Google-logo.svg" alt="Google">
+                        <img class="button-icon" src="/Images/Icons/Google-logo.svg" alt="Google" id="googleplaypic">
                         <div class="button-text-container">
                             <span class="button-small-text-google">GET IT ON</span>
                             <span class="button-large-text">Google Play</span>
@@ -67,7 +67,7 @@
     </div> 
 </section>
 
-<!--Brands-->
+<!--MARK:Brands-->
 <section class="brands">
     <div class="container">
         <div class="brand-area">
@@ -81,7 +81,7 @@
     </div>
 </section>
 
-<!--Features-->
+<!--MARK:Features-->
 <section class="features">
     <div class="container">    
         <div class="features-content">
@@ -142,7 +142,7 @@
     </div>
 </section>
 
-<!--How Does it work-->
+<!--MARK:How Does it work-->
 <section class="how-does">
     <div class="container">
         <div class="how-does-content">
@@ -156,7 +156,7 @@
     </div>
 </section>
 
-<!--App Features-->
+<!--MARK:App Features-->
 <section class="app-features">
     <div class="container">
         <div class="app-features-content">
@@ -193,45 +193,131 @@
     </div>
 </section>
 
-<!--Testimonials-->
+<!--MARK:Testimonials-->
 <section class="testimonials">
     <div class="container">
         <div class="testimonials-content">      
             <h2 class="testimonials-header">Clients are Loving Our App</h2>
-            <img class="testimonials-pic" src="/Images/testimonial1.svg">
-            <img class="testimonials-pic" src="/Images/testimonial2.svg">
+            <img class="testimonials-pic" id="testimonial-pic1" src="/Images/testimonial1.svg">
+            <img class="testimonials-pic" id="testimonial-pic2" src="/Images/testimonial2.svg">
         </div>
     </div>
 </section>
 
-<!--FAQ-->
+<!--MARK:FAQ-->
 <section class="faq">
     <div class="container">
         <div class="faq-content">
             <div class="faq-question">
-                <h2>Any questions? Check out the FAQs</h2>
-                <p>Still have unanswered questions and need to get in touch?</p>
-                <div>
-                    <div>
-                        <i></i>
-                        <p></p>
-                        <a href="#"></a>
+                <h2 class="faq-large-text">Any questions? Check out the FAQs</h2>
+                <p class="faq-small-text">Still have unanswered questions and need to get in touch?</p>
+                <div class="faq-question-box">
+                    <div class="faq-question-boxes">
+                        <img src="/Images/Icons/contactcall.svg">
+                        <p class="faq-box-text">Still have  questions?</p>
+                        <div class="contact-arrow"><a class="contact-blue" href="#">Contact us</a><img src="/Images/Icons/arrow-icon-blue.svg"></div>
                     </div>
-                        <i></i>
-                        <p></p>
-                        <a href="#"></a>
-                    <div>
-
+                    <div class="faq-question-boxes">
+                        <img src="/Images/Icons/contactmsg.svg">
+                        <p class="faq-box-text">Don't like phone calls?</p>
+                        <div class="contact-arrow"><a class="contact-green" href="#">Contact us</a><img src="/Images/Icons/arrow-icon-green.svg"></div>
                     </div>
                 </div>
             </div>
-            <div class="faq-accordion">
-               
+            <div class="accordion">
+                <div class="custom-select">
+                    <div class="select-box">
+                        <span class="selected">Is any of my personal information stored in the App?</span>
+                        <div class="arrow-button"></div>
+                    </div>
+                    <div class="options">
+                        <div class="option" data-value="1">We value your privacy and take the protection of your information seriously. The app only stores essential data needed to provide its core functionality and improve your experience. Personal details are never shared with third parties without your consent, and all information is encrypted to ensure security. You are always in control of what data is saved, and you can request removal or updates at any time.</div>
+                    </div>
+                    <input type="hidden" id="selected-valute" name="selected-value">
+                </div>
+                <div class="custom-select">
+                    <div class="select-box">
+                        <span class="selected">What formats can I download my transaction history in?</span>
+                        <div class="arrow-button"></div>
+                    </div>
+                    <div class="options">
+                        <div class="option" data-value="1">You can easily export your transaction history in several widely used formats to suit your needs. Common options include PDF for a clear and printable overview, CSV for use in spreadsheets and financial tools, and Excel for more advanced analysis. Each format provides the same detailed information about your transactions, so you can choose the one that works best for organizing, sharing, or archiving your records.</div>
+                    </div>
+                    <input type="hidden" id="selected-valute" name="selected-value">
+                </div>
+                <div class="custom-select">
+                    <div class="select-box">
+                        <span class="selected">Can I schedule future transfers?</span>
+                        <div class="arrow-button"></div>
+                    </div>
+                    <div class="options">
+                        <div class="option" data-value="1">Our platform is designed with security and convenience in mind, giving you control over how your data is handled. Information is processed in compliance with industry standards, ensuring that your personal details remain safe while still allowing the app to deliver its full functionality. Clear settings let you manage what is stored, what is shared, and how long data is kept, so you always know exactly how your information is being used.</div>
+                    </div>
+                    <input type="hidden" id="selected-valute" name="selected-value">
+                </div>
+                <div class="custom-select">
+                    <div class="select-box">
+                        <span class="selected">When can I use Banking App services?</span>
+                        <div class="arrow-button"></div>
+                    </div>
+                    <div class="options">
+                        <div class="option" data-value="1">You can access Banking App services anytime, day or night, directly from your phone or computer. Most core features, such as checking balances, transferring funds, and viewing transaction history, are available 24/7. Some actions, like processing payments or scheduling transfers, may depend on banking hours, but the app will always let you know when transactions are pending. This ensures that you can manage your finances whenever it is most convenient for you.</div>
+                    </div>
+                    <input type="hidden" id="selected-valute" name="selected-value">
+                </div>
+                <div class="custom-select">
+                    <div class="select-box">
+                        <span class="selected">Can I create my own password that is easy for me to remember?</span>
+                        <div class="arrow-button"></div>
+                    </div>
+                    <div class="options">
+                        <div class="option" data-value="1">Yes, you can create your own password, and we encourage you to choose one that is both secure and easy for you to remember. For your protection, the app requires passwords to meet certain criteria, such as a minimum length and the use of a mix of letters, numbers, and symbols. This helps prevent unauthorized access while still allowing you to select something personal and memorable. If you ever forget your password, you can easily reset it through the app’s secure recovery process.</div>
+                    </div>
+                    <input type="hidden" id="selected-valute" name="selected-value">
+                </div>
+                <div class="custom-select">
+                    <div class="select-box">
+                        <span class="selected">What happens if I forget or lose my password?</span>
+                        <div class="arrow-button"></div>
+                    </div>
+                    <div class="options">
+                        <div class="option" data-value="1">If you forget or lose your password, you can quickly reset it through the secure recovery process in the app. Simply choose the “Forgot Password” option, and you will be guided through steps to verify your identity using your registered email, phone number, or other security methods. Once verified, you can create a new password and regain access to your account. This ensures that your information stays protected, even if your password is misplaced.</div>
+                    </div>
+                    <input type="hidden" id="selected-valute" name="selected-value">
+                </div>
             </div>
         </div>
     </div>
 </section>
 
+<!--MARK:Subscribe-->
+<section class="subscribe">
+    <div class="container">
+        <div class="sub-content">
+            <div class="bell-h2">
+                <img src="/Images/notification.svg">
+                <h2>Subscribe to our newsletter to stay informed about latest updates</h2>
+            </div>
+                <form class="your-email">
+                    <div class="input-container">
+                        <input type="email" placeholder="Your Email">
+                    </div>
+                    <button class="sub-button">Subscribe</button> 
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
+<!--MARK:Footer-->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <p>© 2025 Silicon. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="/js/main.js"></script>
 </body>
 </html>
